@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const TypedSassPlugin = require('typed-sass-plugin')
 // const WebpackNotifierPlugin = require('webpack-notifier');
 
 const isProduction = process.env.NODE_ENV === 'production';
@@ -93,6 +94,7 @@ module.exports = {
             minify: true,
             filename: 'index.html',
         }),
+        new TypedSassPlugin(),
     ],
 
     devtool: 'source-map',

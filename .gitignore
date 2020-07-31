@@ -105,3 +105,6 @@ dist
 
 .vscode
 .idea
+
+# Generated SASS Typescript declaration files
+*.scss.d.ts
